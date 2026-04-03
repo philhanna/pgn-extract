@@ -7,3 +7,5 @@ results, etc.
 
 The program has been actively maintained by its author, David Barnes, since 1994, and is widely used in the global
 chess community.
+
+Source: git@github.com:kentdjb/pgn-extract.git
