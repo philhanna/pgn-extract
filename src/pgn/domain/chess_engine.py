@@ -1,4 +1,8 @@
-from .models import Board, Move, Colour, Piece, PieceType
+from .board import Board
+from .move import Move
+from .colour import Colour
+from .piece import Piece
+from .piece_type import PieceType
 
 class ChessEngine:
     """
@@ -21,18 +25,3 @@ class ChessEngine:
     def calculate_zobrist(self, board: Board) -> int:
         # Logic from init_hashtab and hash_lookup in map.c
         pass
-
-class DuplicateDetector:
-    """
-    Port of hashing.c.
-    """
-    def __init__(self):
-        self.seen_hashes = {}
-
-    def is_duplicate(self, game_final_hash: int, cumulative_hash: int) -> bool:
-        # Logic from previous_occurance()
-        key = (game_final_hash, cumulative_hash)
-        if key in self.seen_hashes:
-            return True
-        self.seen_hashes[key] = True
-        return False

@@ -1,5 +1,5 @@
-from pgn.ports.repository import PGNRepository
-from pgn.domain.chess_engine import ChessEngine, DuplicateDetector
+from ports.repository import PGNRepository
+from domain.chess_engine import ChessEngine, DuplicateDetector
 
 class PGNProcessor:
     def __init__(self, repo: PGNRepository, engine: ChessEngine, detector: DuplicateDetector):

@@ -1,6 +1,7 @@
 import chess.pgn  # Using a library like python-chess for the adapter layer
 from ..ports.repository import PGNRepository
-from ..domain.models import Game, Move
+from ..domain.game import Game
+from ..domain.move import Move
 
 class FilePGNAdapter(PGNRepository):
     def load_games(self, file_path: str):

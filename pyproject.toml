@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pgn-extract-py"
+version = "0.1.0"
+description = "A Python port of the pgn-extract tool using Ports and Adapters architecture."
+authors = [
+    { name = "David J. Barnes", email = "d.j.barnes@kent.ac.uk" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment :: Chess",
+]
+dependencies = [
+    "python-chess>=1.9.0",
+]
+
+[project.scripts]
+pgn-extract-py = "cli_adapter:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = {find = {where = ["src"]}}
