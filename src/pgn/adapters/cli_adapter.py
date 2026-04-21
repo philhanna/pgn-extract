@@ -1,7 +1,8 @@
 import argparse
 import sys
-from pgn.domain.chess_engine import ChessEngine, DuplicateDetector
-from pgn.adapters.file_adapter import FilePGNAdapter
+from pgn.domain.chess_engine import ChessEngine
+from pgn.domain.duplicate_detector import DuplicateDetector
+from pgn.adapters.file_pgn_adapter import FilePGNAdapter
 from pgn.application.app_service import PGNProcessor
 
 def main():

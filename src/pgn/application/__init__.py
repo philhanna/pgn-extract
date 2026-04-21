@@ -1,1 +1,1 @@
-# pgn.application
+from .app_service import PGNProcessor

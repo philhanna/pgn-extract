@@ -1,5 +1,6 @@
-from ports.repository import PGNRepository
-from domain.chess_engine import ChessEngine, DuplicateDetector
+from pgn.ports.pgn_repository import PGNRepository
+from pgn.domain.chess_engine import ChessEngine
+from pgn.domain.duplicate_detector import DuplicateDetector
 
 class PGNProcessor:
     def __init__(self, repo: PGNRepository, engine: ChessEngine, detector: DuplicateDetector):
@@ -9,8 +10,6 @@ class PGNProcessor:
 
     def process_extraction(self, source: str):
         for game in self.repo.load_games(source):
-            # Process moves and check criteria
-            # (Equivalent to apply_move_list in apply.c)
             if not self.detector.is_duplicate(game.final_hash, game.cumulative_hash):
-                # Handle output...
+                # Handle output logic via ports would go here
                 pass

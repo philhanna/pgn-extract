@@ -1,1 +1,2 @@
-# pgn.adapters
+from .file_pgn_adapter import FilePGNAdapter
+from .console_logger_adapter import ConsoleLoggerAdapter
