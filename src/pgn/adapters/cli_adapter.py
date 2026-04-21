@@ -44,7 +44,6 @@ def main():
     parser.add_argument("--version", action="version", version="pgn-extract-py v0.1 (Port of v26-02)")
 
     args = parser.parse_args()
-
     if not args.files:
         parser.print_help()
         sys.exit(1)
